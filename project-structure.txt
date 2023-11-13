@@ -1,1 +1,19 @@
-
+todo-list-application
+|-- src
+|   |-- main
+|       |-- java
+|       |   |-- com
+|       |       |-- yourpackage
+|       |           |-- controller
+|       |           |   |-- TodoController.java
+|       |           |-- model
+|       |           |   |-- TodoItem.java
+|       |           |-- repository
+|       |           |   |-- TodoRepository.java
+|       |           |-- service
+|       |               |-- TodoService.java
+|       |-- resources
+|           |-- templates
+|               |-- index.html
+|-- pom.xml
+|-- TodoListApplication.java
