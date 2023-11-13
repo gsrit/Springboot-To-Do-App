@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+</head>
+<body>
+
+<h2>Todo List</h2>
+
+<form action="/todo/add" method="post">
+    <label for="task">Task:</label>
+    <input type="text" id="task" name="task" required>
+    <button type="submit">Add</button>
+</form>
+
+<ul>
+    <li th:each="todoItem : ${todoItems}">
+        <span th:text="${todoItem.task}"></span>
+        <a th:href="@{/todo/delete/{id}(id=${todoItem.id})}" onclick="return confirm('Are you sure?')">Delete</a>
+    </li>
+</ul>
+
+</body>
+</html>
